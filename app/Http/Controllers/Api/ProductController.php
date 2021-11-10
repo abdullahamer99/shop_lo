@@ -92,6 +92,9 @@ class ProductController extends BaseController
 
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return $this->sendResponse(
+            new ProductRessource($product),
+            'Product deleted successfully!');
     }
 }

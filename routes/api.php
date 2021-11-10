@@ -28,6 +28,7 @@ Route::get('/products',[\App\Http\Controllers\Api\ProductController::class,'inde
 Route::get('/products/{id}',[\App\Http\Controllers\Api\ProductController::class,'show']);
 Route::post('/product',[\App\Http\Controllers\Api\ProductController::class,'store']);
 Route::put('/product',[\App\Http\Controllers\Api\ProductController::class,'update']);
+Route::delete('/products/{id}',[\App\Http\Controllers\Api\ProductController::class,'destroy']);
 
 //Categories
 Route::get('/categories',[\App\Http\Controllers\Api\CategoryController::class,'index']);
